@@ -53,9 +53,6 @@
 
 /* TODO: Delete any stylesheets you don't plan to use on your site. */
 
-/* File for animation effects that make elements move (e.g., flying) */
-@import url("make-something-fly.css");
-
 /* File for animation effects that make elements blink */
 @import url("make-something-blink.css");
 
@@ -156,7 +153,7 @@
   /* Special Elements */
   --color-icon-heart: darkred;
   --color-text-holding-footer: #f8f8ff;
-  --color-bg-selection: #5200ff;
+  --color-bg-selection: #dfd7d3;
   --color-shadow-stroke: rgba(0, 0, 0, 0.4);
   /* Assets */
   --image-noise-texture: url(/assets/temp/noise.svg);
@@ -523,10 +520,14 @@ sup {
 
 /* Main hero headline — usually sits in the intro section */
 .hero-headline {
-  color: var(--color-accent-primary); /* Uses your brand's dominant color */
+  /* Uses your brand's dominant color */
   max-width: 40ch; /* Optimal line length for readability (~40 characters) */
   text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
   margin-inline: auto; /* Horizontally centers the text in its container */
+}
+.hero-image {
+  padding: 3rem;
+  border: 10px solid green;
 }
 
 /* Large project title — appears on individual project pages */
@@ -1380,6 +1381,11 @@ to keep your styles reusable and consistent.
 
 @media (min-width: 768px) {
   /* TODO: Adjust  layout for tablets */
+
+  .hero-image {
+    padding: 2rem;
+    background: yellow;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -1565,6 +1571,10 @@ to keep your styles reusable and consistent.
 
   /* About Page Grid for Large Devices */
 
+  .hero-image {
+    border: 2px solid pink;
+    padding: 6rem;
+  }
   .about-grid {
     padding: var(--padding-jumbo);
     grid-template-columns: 2fr 3fr;
