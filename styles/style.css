@@ -100,8 +100,8 @@
   /* Core Colours */
   --color-text-primary: #000004;
   --color-text-secondary: #015a84;
-  --color-accent-primary: #007dab;
-  --color-accent-secondary: #00b9ed;
+  --color-accent-primary: #015a84;
+  --color-accent-secondary: #b8dadf;
   --color-overlay-primary: rgba(0, 185, 237, 0.5);
   --color-highlight: lemonchiffon;
   --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
@@ -109,20 +109,20 @@
   --color-bg: #f2ecea;
   --color-bg-about: #f2ecea;
   --color-bg-footer: #f2ecea;
-  --color-bg-holding-page: rgba(82, 0, 255, 0.6);
+  --color-bg-holding-page: #015a84;
   /* Headings */
   --h1-color: #015a84;
   --h2-color: #015a84;
   --h3-color: #015a84;
-  --h4-color: #5200ff;
-  --h5-color: #5200ff;
-  --h6-color: #5200ff;
+  --h4-color: #000004;
+  --h5-color: #000004;
+  --h6-color: #000004;
   /* Special Text Colours */
   --color-text-holding-title: #ebedf0;
   --color-text-project-category: #f2ecea;
-  --color-text-project-description: #222;
-  --color-text-project-sidebar: #222;
-  --color-text-project-title: #5200ff;
+  --color-text-project-description: #000004;
+  --color-text-project-sidebar: #000004;
+  --color-text-project-title: #015a84;
   --color-text-work-grid-title: #f2ecea;
   /* Link States */
   --color-link: #015a84;
@@ -132,9 +132,9 @@
   --color-nav-link: #007dab;
   --color-nav-link-hover: #007dab;
   --color-nav-arrow: #007dab;
-  --color-nav-arrow-hover: #000;
-  --color-nav-arrow-stroke: #5200ff;
-  --color-nav-arrow-stroke-hover: #000;
+  --color-nav-arrow-hover: #000004;
+  --color-nav-arrow-stroke: #015a84;
+  --color-nav-arrow-stroke-hover: #000004;
   /* Components */
   --color-bg-full-width: #f2ecea;
   --color-bg-project-description: #f2ecea;
@@ -171,6 +171,8 @@
   --gap-large: 3rem; /* Section gap: major content blocks, banner spacing */
   --gap-jumbo: 4rem; /* Hero gap: full-width containers, large card spacing */
   --gap-ultra: 8rem; /* Edge-to-edge spacing: mega sections, spacious layouts */
+  /* Project Accent Colors */
+  --packguin-accent: #00386d;
 }
 
 /* ======================
@@ -793,7 +795,7 @@ a:active {
 
 .full-width-headline-wrapper {
   width: 100%;
-  min-height: 60vh; /* Ensures the headline takes up a good portion of the screen */
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1089,11 +1091,6 @@ a:active {
 /* ✨ Footer Special Elements                                                 */
 /* -------------------------------------------------------------------------- */
 
-/* Heart icon for copyright/love notes */
-.heart {
-  color: var(--color-icon-heart); /* Color for heart icon */
-}
-
 .footer-fineprint {
   font-size: 0.875rem; /* Slightly smaller for disclaimers or captions */
   color: var(--color-text-secondary); /* Themed color */
@@ -1241,6 +1238,14 @@ a:active {
   font-size: 1rem;
   line-height: 1.2; /* Consistent line height for project items to improve spacing */
   margin-bottom: 0.25rem;
+}
+
+.packguin-accent {
+  background: var(--packguin-accent);
+}
+
+.blue-background {
+  background-color: var(--packguin-accent);
 }
 
 /*
