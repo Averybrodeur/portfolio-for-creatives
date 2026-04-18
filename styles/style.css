@@ -56,9 +56,6 @@
 /* File for animation effects that make elements blink */
 @import url("make-something-blink.css");
 
-/* File for adding a glitch animation to your 404 error page */
-@import url("error.css");
-
 /* File for adding text stroke (outline) effect */
 @import url("text-stroke.css");
 
@@ -104,7 +101,7 @@
   --color-accent-secondary: #b8dadf;
   --color-overlay-primary: rgba(0, 185, 237, 0.5);
   --color-highlight: lemonchiffon;
-  --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
+
   /* Backgrounds */
   --color-bg: #f2ecea;
   --color-bg-about: #f2ecea;
@@ -119,11 +116,11 @@
   --h6-color: #000004;
   /* Special Text Colours */
   --color-text-holding-title: #ebedf0;
-  --color-text-project-category: #f2ecea;
+  --color-text-project-category: #000004;
   --color-text-project-description: #000004;
   --color-text-project-sidebar: #000004;
   --color-text-project-title: #015a84;
-  --color-text-work-grid-title: #f2ecea;
+  --color-text-work-grid-title: #015a84;
   /* Link States */
   --color-link: #015a84;
   --color-link-hover: #b8dadf;
@@ -197,7 +194,7 @@ html {
   box-sizing: border-box; /* Makes sure padding and borders don't add extra width to elements */
   scroll-behavior: smooth; /* Adds smooth scrolling between sections */
   cursor:
-    url("../assets/temp/up-cursor.png"), auto !important; /* Custom cursor (change the URL below to use your own) */
+    url("../assets/branding-images/cursor.svg"), auto !important; /* Custom cursor (change the URL below to use your own) */
 
   /* TODO: Replace the URL above to add a custom cursor. 
      If you want to use the default browser cursor, just delete this line. */
@@ -559,7 +556,7 @@ sup {
 
 /* 📂 Project grid title — used in grid view (like a portfolio gallery) */
 .work-grid-project-title {
-  font-size: 2.875rem;
+  font-size: 2.5rem;
   color: var(--color-text-work-grid-title);
   text-wrap: balance;
 }
@@ -567,6 +564,7 @@ sup {
 /* 🏷️ Project category label — displays the type or role of the project */
 .work-grid-project-category {
   color: var(--color-text-project-category);
+  font-size: 1rem;
 }
 
 /*
@@ -893,22 +891,20 @@ a:active {
 /* Overlay (appears on hover) */
 .overlay {
   position: absolute;
-  top: 0;
+  top: 1;
   right: 0;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 50%;
   opacity: 0; /* Initially invisible */
   transition: var(--duration-slow) ease;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-start;
   flex-direction: column;
   padding: var(--padding-small);
-  background-color: var(
-    --color-bg-selection
-  ); /* Background color of the overlay */
+  background-color: var(--color-bg); /* Background color of the overlay */
   transition:
     opacity var(--duration-normal),
     visibility var(--duration-normal);
@@ -1378,6 +1374,7 @@ to keep your styles reusable and consistent.
   }
 
   .hero-image {
+    padding: 12rem;
   }
 }
 
@@ -1565,7 +1562,8 @@ to keep your styles reusable and consistent.
   /* About Page Grid for Large Devices */
 
   .hero-image {
-    padding: 6rem;
+    padding: 4rem;
+    margin-left: 2rem;
   }
   .about-grid {
     padding: var(--padding-jumbo);
