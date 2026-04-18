@@ -438,7 +438,7 @@ svg {
 /* Heading Styles (h1 - h6) */
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: var(--font-family-heading);
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -446,7 +446,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: var(--font-family-heading);
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -454,7 +454,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.325rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
   line-height: 1.2;
   color: var(--h3-color);
@@ -524,7 +524,7 @@ sup {
 
 /* Large project title — appears on individual project pages */
 .project-title {
-  font-size: 3.625rem;
+  font-size: 5rem;
   font-family: var(--font-family-project-title);
   color: var(--color-text-project-title);
   margin-bottom: 1rem;
@@ -1273,51 +1273,6 @@ a:active {
 
 /* 
 
-██   ██  ██████  ██      ██████  ██ ███    ██  ██████  
-██   ██ ██    ██ ██      ██   ██ ██ ████   ██ ██       
-███████ ██    ██ ██      ██   ██ ██ ██ ██  ██ ██   ███ 
-██   ██ ██    ██ ██      ██   ██ ██ ██  ██ ██ ██    ██ 
-██   ██  ██████  ███████ ██████  ██ ██   ████  ██████  
-                                                       
-*/
-
-/* ----------------------------------------------------------------
-   Holding Page Styles
-   ----------------------------------------------------------------
-   Includes layout, typography, and visual effects for the demo
-   landing page (index.html).
-
-   Related files:
-     • CSS: styles/interactive-blobs.css
-     • JS:  js/interactive-blobs.js
----------------------------------------------------------------- */
-
-.holding-page-animation {
-  width: 10rem;
-  margin: 0 auto;
-  margin-bottom: 3rem;
-}
-
-.holding-page-title {
-  font-size: 1.5rem;
-  color: var(--color-text-holding-title);
-}
-
-.holding-page-footer {
-  display: grid;
-  place-items: center;
-  min-height: 10vh;
-  width: 100%;
-  padding: var(--padding-small);
-}
-
-.holding-page-copyright {
-  font-size: 0.8rem; /* Smaller font size for copyright text */
-  color: var(
-    --color-text-holding-footer
-  ); /* Custom color for the footer text */
-  margin-bottom: 0; /* Removes default margin from the bottom of the copyright text */
-}
 
 /*
 ███████ ██████  ██████   ██████  ██████  
@@ -1332,13 +1287,24 @@ a:active {
 /* A great 404 page is a chance to leave a memorable impression when visitors land on a page that doesn't exist. Consider customizing this page to be more engaging, humorous, or on-brand with your site. Check out error.css for the gradient and glitch effect. */
 
 .error-headline-wrapper {
-  width: 85%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex: 1;
   align-items: center;
   justify-content: center;
-  padding: var(--padding-small);
+
+  text-align: center;
+  margin: 0 auto;
+}
+
+.error-page-home-link {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   margin: 0 auto;
 }
@@ -1407,8 +1373,11 @@ to keep your styles reusable and consistent.
 @media (min-width: 768px) {
   /* TODO: Adjust  layout for tablets */
 
+  h1 {
+    font-size: 4rem;
+  }
+
   .hero-image {
-    padding: 2rem;
   }
 }
 
@@ -1434,7 +1403,7 @@ to keep your styles reusable and consistent.
   }
 
   h1 {
-    font-size: 8rem;
+    font-size: 6rem;
   }
 
   h2 {
@@ -1495,8 +1464,8 @@ to keep your styles reusable and consistent.
   }
 
   .hero-headline-wrapper {
-    padding-top: var(--padding-jumbo);
-    padding-bottom: var(--padding-jumbo);
+    padding-top: var(--padding-medium);
+    padding-bottom: var(--padding-medium);
     padding-left: var(--padding-ultra);
     padding-right: var(--padding-ultra);
   }
