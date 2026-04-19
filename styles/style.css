@@ -520,9 +520,17 @@ sup {
 }
 .hero-image {
   padding: 5rem;
-  background: hotpink;
 }
 
+.hatchery-hero-image {
+  background-image: url(/assets/project-2/hatchery-hero-image.jpg);
+  width: 100%;
+  min-height: 80vh; /* Takes up most of the screen height */
+  display: flex;
+  flex-direction: column;
+  object-fit: contain;
+  background-repeat: no-repeat;
+}
 /* Large project title — appears on individual project pages */
 .project-title {
   font-size: 5rem;
