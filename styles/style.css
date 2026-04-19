@@ -242,6 +242,7 @@ svg {
   vertical-align: top; /* Removes little gaps under images (from line-height) */
   object-fit: contain; /* Optional: Makes sure the whole image fits inside its box */
   /* Try 'cover' if you want it to fill the space, or remove this line if not needed */
+  border-radius: var(--radius-md);
 }
 
 /* ---------------------------------------- */
@@ -394,7 +395,7 @@ svg {
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio (because 9 ÷ 16 = 0.5625) */
+  padding-left: 3rem;
   margin-bottom: 1rem;
 }
 /* The iframe is absolutely positioned to fill the container */
@@ -1495,17 +1496,6 @@ to keep your styles reusable and consistent.
     grid-gap: 1rem;
   }
 
-  /* Grayscale filter with full-colour on hover and tap */
-
-  .work-page-grid-item a.grayscale img {
-    filter: grayscale(100);
-  }
-
-  .work-page-grid-item > a.grayscale:active img,
-  .work-page-grid-item > a.grayscale:hover img {
-    filter: grayscale(0);
-  }
-
   /* Padding around work grid and project page */
 
   .portfolio,
@@ -1659,7 +1649,6 @@ to keep your styles reusable and consistent.
   .hero-image {
     padding: 4rem;
     margin-left: 2rem;
-    background: blueviolet;
   }
 }
 
