@@ -103,7 +103,8 @@
   --color-highlight: lemonchiffon;
 
   /* Backgrounds */
-  --color-bg: rgba(242, 236, 234, 0.6);
+  --color-bg: rgb(242, 236, 234);
+  --color-bg-overlay: rgba(242, 236, 234, 0.6);
   --color-bg-hover: rgba(242, 236, 234, 0.4);
   --color-bg-about: #f2ecea;
   --color-bg-footer: #f2ecea;
@@ -398,11 +399,11 @@ svg {
 }
 /* The iframe is absolutely positioned to fill the container */
 .responsive-iframe {
-  position: absolute;
+  position: relative;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -541,7 +542,9 @@ sup {
 .h1-full-width,
 .h2-full-width {
   width: 100%;
-  padding: var(--padding-small);
+  padding-top: var(--padding-large);
+
+  font-size: 4rem;
 }
 
 /* ✨ Highlighted text — great for emphasis */
@@ -782,7 +785,7 @@ a:active {
 
 .full-width-section {
   width: 100%;
-  min-height: 80vh; /* Takes up most of the screen height */
+  min-height: 20vh; /* Takes up most of the screen height */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -906,7 +909,9 @@ a:active {
   align-items: flex-start;
   flex-direction: column;
   padding: var(--padding-small);
-  background-color: var(--color-bg); /* Background color of the overlay */
+  background-color: var(
+    --color-bg-overlay
+  ); /* Background color of the overlay */
   transition:
     opacity var(--duration-normal),
     visibility var(--duration-normal);
@@ -1420,7 +1425,7 @@ to keep your styles reusable and consistent.
   .h1-full-width,
   .h2-full-width {
     width: 70%;
-    padding: var(--padding-small);
+    padding-top: var(--padding-large);
   }
 
   /* ----------------------------- */
