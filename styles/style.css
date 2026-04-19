@@ -103,7 +103,8 @@
   --color-highlight: lemonchiffon;
 
   /* Backgrounds */
-  --color-bg: #f2ecea;
+  --color-bg: rgba(242, 236, 234, 0.6);
+  --color-bg-hover: rgba(242, 236, 234, 0.4);
   --color-bg-about: #f2ecea;
   --color-bg-footer: #f2ecea;
   --color-bg-holding-page: #015a84;
@@ -517,6 +518,7 @@ sup {
 }
 .hero-image {
   padding: 5rem;
+  background: hotpink;
 }
 
 /* Large project title — appears on individual project pages */
@@ -741,7 +743,7 @@ a:active {
   align-items: center;
   justify-content: center;
   padding: var(--padding-small);
-  text-align: center; /* Keeps text centered */
+  text-align: left; /* Keeps text centered */
 }
 
 .hero-icon {
@@ -891,13 +893,13 @@ a:active {
 /* Overlay (appears on hover) */
 .overlay {
   position: absolute;
-  top: 1;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 50%;
-  opacity: 0; /* Initially invisible */
+  height: 100%;
+  opacity: 1; /* Initially invisible */
   transition: var(--duration-slow) ease;
   display: flex;
   justify-content: flex-end;
@@ -913,7 +915,7 @@ a:active {
 /* Hover effect on work page grid items */
 .work-page-grid-item:hover .overlay {
   visibility: visible; /* Make overlay visible on hover */
-  opacity: 1; /* Set opacity on hover */
+  background-color: var(--color-bg-hover);
 }
 
 /* Optional container for future overlay customization */
@@ -1374,7 +1376,11 @@ to keep your styles reusable and consistent.
   }
 
   .hero-image {
-    padding: 12rem;
+    padding-top: 1rem;
+    padding-right: 12rem;
+    padding-bottom: 1rem;
+    padding-left: 12rem;
+    background: red;
   }
 }
 
@@ -1562,8 +1568,9 @@ to keep your styles reusable and consistent.
   /* About Page Grid for Large Devices */
 
   .hero-image {
-    padding: 4rem;
-    margin-left: 2rem;
+    padding: 2rem;
+    margin-left: 0;
+    background: palegreen;
   }
   .about-grid {
     padding: var(--padding-jumbo);
@@ -1643,6 +1650,11 @@ to keep your styles reusable and consistent.
 
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+  .hero-image {
+    padding: 4rem;
+    margin-left: 2rem;
+    background: blueviolet;
   }
 }
 
