@@ -549,6 +549,11 @@ sup {
   font-size: 4rem;
 }
 
+.p-full-width {
+  max-width: 80ch; /* Optimal line length for readability (~40 characters) */
+  text-wrap: balance;
+}
+
 /* ✨ Highlighted text — great for emphasis */
 .highlight-primary {
   color: var(--color-accent-secondary);
