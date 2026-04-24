@@ -389,7 +389,6 @@ svg {
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding-left: 3rem;
   margin-bottom: 1rem;
 }
 /* The iframe is absolutely positioned to fill the container */
@@ -519,7 +518,7 @@ sup {
 .hatchery-hero-image {
   background-image: url(/assets/project-2/hatchery-hero-image.jpg);
   width: 100%;
-  min-height: 80vh; /* Takes up most of the screen height */
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   object-fit: contain;
@@ -527,7 +526,7 @@ sup {
 }
 /* Large project title — appears on individual project pages */
 .project-title {
-  font-size: 5rem;
+  font-size: 3rem;
   font-family: var(--font-family-project-title);
   color: var(--color-text-project-title);
   margin-bottom: 1rem;
@@ -568,7 +567,7 @@ sup {
 
 /* 📂 Project grid title — used in grid view (like a portfolio gallery) */
 .work-grid-project-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--color-text-work-grid-title);
   text-wrap: balance;
 }
@@ -810,7 +809,7 @@ a:active {
   align-items: center;
   justify-content: center;
   padding: var(--padding-small);
-  text-align: center; /* Keeps the text centered */
+  text-align: left; /* Keeps the text centered */
 }
 
 .section-container {
@@ -1148,7 +1147,7 @@ a:active {
 /* Full-width wrapper for the project section */
 .project-wrapper-full-width {
   width: 100%;
-  padding: var(--padding-small);
+  padding-bottom: var(--padding-small);
 }
 
 /* Container for the project content with full-width display */
@@ -1183,7 +1182,7 @@ a:active {
   justify-content: flex-start;
   flex-direction: column;
   background: var(--color-bg-project-description);
-  padding: var(--padding-small);
+  padding-bottom: var(--padding-small);
   width: 100%;
   margin-bottom: 1rem; /* Space below the description */
 }
@@ -1433,6 +1432,26 @@ to keep your styles reusable and consistent.
     padding-top: var(--padding-large);
   }
 
+  .full-width-headline-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-small);
+    text-align: center; /* Keeps the text centered */
+  }
+
+  .hatchery-hero-image {
+    background-image: url(/assets/project-2/hatchery-hero-image.jpg);
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    object-fit: cover;
+    background-repeat: no-repeat;
+  }
+
   /* ----------------------------- */
   /* 📦 Padding Utilities (Desktop) */
   /* ----------------------------- */
@@ -1544,6 +1563,7 @@ to keep your styles reusable and consistent.
 
   .project-image-container,
   .project-description-container {
+    padding: var(--padding-small);
     flex-direction: row;
   }
 
